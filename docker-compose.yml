@@ -5,7 +5,7 @@ services:
     container_name: jappy_hub
     hostname: jappy_hub
     ports:
-      - 8888:8888
+      - 8000:8000
       - 10000:10000
     volumes:
       - ./hub_etc:/etc
