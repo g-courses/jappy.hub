@@ -1,45 +1,18 @@
-# Dockerfile para JAPPY versión devcontainer con vscode
-# Dependencias:
-#   imagen docker: gastudil/courses:jappy-jupyter
-#   archivos     : https://github.com/g-courses/jappy.rc
-#
-# Version 1.0
+services:
+  jappy-hub:
+    platform: linux/amd64
+    image: gastudil/courses:jappy-hub
+    container_name: jappy_hub
+    hostname: jappy_hub
+    ports:
+      - 8888:8888
+      - 10000:10000
+    volumes:
+      - ./hub_etc:/etc
+      - ./hub_homes:/home/hub_homes
+    networks:
+      - back_net
 
-FROM gastudil/courses:jappy-latest
-
-LABEL "description"="JAPPY-Hub: Educational resource for programming classes in Java, cPP (C++) and Python with vscode and devcontainer (server version)" 
-
-ARG DEBIAN_FRONTEND=noninteractive
-ENV TZ=America/Santiago
-
-ARG USER=devuser
-ARG IMAGE_DIR=https://raw.githubusercontent.com/g-courses/jappy.rc/refs/heads/main/image_dir
-
-# Install Jupyer Hub
-# =====================================
-
-RUN apt update && apt install --no-install-recommends --yes  jupyterhub npm
-RUN apt autoremove -y && apt clean && rm -rf /var/lib/apt/lists/*
-
-RUN npm install -g configurable-http-proxy
-
-RUN cd /home && git clone https://github.com/jupyterhub/nativeauthenticator.git
-RUN cd /home/nativeauthenticator && pip3 install -e .
-
-WORKDIR /home/$USER/
-
-ADD $IMAGE_DIR/etc/jupyterhub/jupyterhub_config.py /etc/jupyterhub/jupyterhub_config.py
-ADD $IMAGE_DIR/jupyterhub/templates/login.html /home/$USER/templates/login.html
-
-RUN curl -o webmin-setup-repo.sh https://raw.githubusercontent.com/webmin/webmin/master/webmin-setup-repo.sh
-RUN sh /home/$USER/webmin-setup-repo.sh -f
-RUN apt-get install --install-recommends --yes  webmin usermin
-
-RUN apt autoremove -y && apt clean && rm -rf /var/lib/apt/lists/*
-
-RUN /usr/share/webmin/changepass.pl /etc/webmin root ninguna
-
-
-
-
+networks:
+  back_net:
 
