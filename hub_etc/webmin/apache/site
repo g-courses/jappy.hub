@@ -1,0 +1,7 @@
+version=2.452
+webmin=2.302
+allmodules=core mod_so mod_watchdog http_core mod_log_config mod_logio mod_version mod_unixd mod_access_compat mod_alias mod_auth_basic mod_authn_core mod_authn_file mod_authz_core mod_authz_host mod_authz_user mod_autoindex mod_deflate mod_dir mod_env mod_filter mod_mime mod_mpm_event mod_negotiation mod_reqtimeout mod_setenvif mod_status mod_core mod_http
+modules=core/2.452 mod_log_config/2.452 mod_alias/2.452 mod_auth_basic/2.452 mod_authn_file/2.452 mod_authz_host/2.452 mod_autoindex/2.452 mod_dir/2.452 mod_env/2.452 mod_mime/2.452 mod_mpm_event/2.452 mod_negotiation/2.452 mod_setenvif/2.452 mod_status/2.452
+fullversion=2.4.52
+path=/usr/sbin/apache2
+size=758672

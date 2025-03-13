@@ -1,0 +1,1 @@
+deb [signed-by=/usr/share/keyrings/ubuntu-webmin-developers.gpg] https://download.webmin.com/download/newkey/repository stable contrib

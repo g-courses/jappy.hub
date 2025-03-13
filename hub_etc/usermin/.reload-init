@@ -1,0 +1,4 @@
+#!/bin/sh
+echo Reloading Usermin server in /usr/share/usermin
+pidfile=`grep "^pidfile=" /etc/usermin/miniserv.conf | sed -e 's/pidfile=//g'`
+kill -USR1 `cat $pidfile`

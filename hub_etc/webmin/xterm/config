@@ -1,0 +1,6 @@
+locale=0
+base_port=555
+fontsize=15
+rcfile=0
+xterm=xterm-256color
+screen_reader=false

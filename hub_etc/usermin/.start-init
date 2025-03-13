@@ -1,0 +1,10 @@
+#!/bin/sh
+echo Starting Usermin server in /usr/share/usermin
+trap '' 1
+LANG=
+export LANG
+unset PERLIO
+export PERLIO
+PERLLIB=
+export PERLLIB
+exec '/usr/share/usermin/miniserv.pl' $* /etc/usermin/miniserv.conf
