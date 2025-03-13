@@ -10,6 +10,7 @@ services:
     volumes:
       - ./hub_etc:/etc
       - ./hub_homes:/home/hub_homes
+      - ./hub_examples:/home/codes_examples
     networks:
       - back_net
 
