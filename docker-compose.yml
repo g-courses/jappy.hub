@@ -6,7 +6,7 @@ services:
     hostname: jappy_hub
     ports:
       - 8000:8000
-      - 10000:10000
+      - 10666:10666
     volumes:
       - ./hub_etc:/etc
       - ./hub_homes:/home/hub_homes
