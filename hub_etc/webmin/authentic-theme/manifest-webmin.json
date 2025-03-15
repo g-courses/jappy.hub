@@ -1,5 +1,5 @@
 {
-    "name": "Webmin on jappy_hub..",
+    "name": "Webmin on jappy_hub",
     "short_name": "Webmin",
     "description": "Powerful and flexible web-based server management control panel",
     "start_url": "./",
@@ -30,7 +30,7 @@
         "purpose": "maskable"
     }
 ],
-    "theme_color": "#033e86",
+    "theme_color": "#003670",
     "background_color": "#ffffff",
     "display": "standalone"
 }
