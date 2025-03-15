@@ -19,7 +19,8 @@ c.Authenticator.allow_all = True
 c.Authenticator.admin_users = {'gabriel'}
 #c.Authenticator.allow_existing_users = True
 
-c.JupyterHub.template_paths = ['/home/devuser/templates']
+c.JupyterHub.template_paths = ['/home/jupyterhub_custom/templates']
+
 
 #------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
