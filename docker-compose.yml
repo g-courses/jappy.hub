@@ -11,6 +11,7 @@ services:
       - ./hub_etc:/etc
       - ./hub_homes:/home/hub_homes
       - ./hub_examples:/home/hub_examples
+      - ./jupyterhub_custom:/home/jupyterhub_custom
     networks:
       - back_net
 
