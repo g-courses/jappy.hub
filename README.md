@@ -1,4 +1,4 @@
-# jappy.hub
+# Jappy Server
 
 Clonar este repositorio en el host servidor:
 ```
@@ -22,17 +22,21 @@ Todo el directorio `/etc` del contenedor está montado desde el directorio `hub_
 
 En el directorio `jupyterhub_custom` están los archivos html personalizados.
 
+En el directorio `hub_examples` se pueden agregar archivos de código que pueden ser visualizados por todos los usuarios. Esto es posible ya que cada usuario creado tiene un directorio llamado `codes_examples` que está mapeado al directorio mencionado. 
+
+## Usuarios
+
 El contenedor tiene dos usuarios unix para acceder al JupyterHub: 
 
 1) `hubtest`: para conocer el uso de la plataforma. Contraseña `ninguna`.
 
 2) `hubadmin`: para acceder al panel de administración de JupterHub.
 
-Para la creación de usuario unix, se debe utilizar el sistema webmin,disponible en la URL:
+Para la creación de usuariois unix, se debe utilizar el sistema webmin,disponible en la URL:
 
 ```
 http://IP_SERVIDOR:10666
 ```
 
-La planilla `crear_cuentas_hub.xlsx` permite crear los datos de entrada para crear usuarios en esta utilidad.
+La planilla `crear_cuentas_hub.xlsx` permite crear los datos de entrada para crear usuarios en esta utilidad. Todo usuario unix creado puede acceder a JupyterHub.
 
