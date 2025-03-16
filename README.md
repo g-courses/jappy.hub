@@ -24,7 +24,7 @@ En el directorio `jupyterhub_custom` están los archivos html personalizados.
 
 En el directorio `hub_examples` se pueden agregar archivos de código que pueden ser visualizados por todos los usuarios. Esto es posible ya que cada usuario creado tiene un directorio llamado `codes_examples` que está mapeado al directorio mencionado. Si quiere que los usuarios de Jupyter no pueden modificar el contenido de este directorio, debe cambiar los permisos a `555`, por ejemplo: `chmod -R 555 hub_examples`.
 
-## Usuarios
+## Usuarios ya creados
 
 El contenedor tiene dos usuarios unix para acceder al JupyterHub: 
 
@@ -32,7 +32,9 @@ El contenedor tiene dos usuarios unix para acceder al JupyterHub:
 
 2) `hubadmin`: para acceder al panel de administración de JupterHub.
 
-Para la creación de usuariois unix, se debe utilizar el sistema webmin,disponible en la URL:
+## Creación de usuarios
+
+Para la creación de usuarios unix, se debe utilizar el sistema webmin,disponible en la URL:
 
 ```
 http://IP_SERVIDOR:10666
