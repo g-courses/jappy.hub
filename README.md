@@ -20,7 +20,7 @@ http://IP_SERVIDOR:8000
 
 Todo el directorio `/etc` del contenedor está montado desde el directorio `hub_etc` en el anfitrión. Además, se sugiere que los usuarios tengan sus HOMEs en el directorio `/home/hub_homes`, el que está montado íntegramente en el directorio `hub_homes` en el anfitrión. Esto es para mantener la persistencia de los datos de trabajo de los usuarios si el contenedor se apaga.
 
-En el directorio ``jupyterhub_custom` están los archivos html personalizados.
+En el directorio `jupyterhub_custom` están los archivos html personalizados.
 
 El contenedor tiene dos usuarios unix para acceder al JupyterHub: 
 
