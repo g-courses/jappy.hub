@@ -16,7 +16,7 @@ c = get_config()  #noqa
 #c.Authenticator.allowed_users = names
 
 c.Authenticator.allow_all = True
-c.Authenticator.admin_users = {'gabriel'}
+c.Authenticator.admin_users = {'hubadmin'}
 #c.Authenticator.allow_existing_users = True
 
 c.JupyterHub.template_paths = ['/home/jupyterhub_custom/templates']
