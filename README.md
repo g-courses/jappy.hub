@@ -20,7 +20,7 @@ http://IP_SERVIDOR:8000
 
 Todo el directorio `/etc` del contenedor está montado desde el directorio `hub_etc` en el anfitrión. Además, se sugiere que los usuarios tengan sus HOMEs en el directorio `/home/hub_homes`, el que está montado íntegramente en el directorio `hub_homes` en el anfitrión. Esto es para mantener la persistencia de los datos de trabajo de los usuarios si el contenedor se apaga.
 
-En el directorio `jupyterhub_custom` están los archivos html personalizados.
+En el directorio `jupyterhub_custom` están archivos html personalizados que permiten cambiar el diseño de la página de login y otras.
 
 En el directorio `hub_examples` se pueden agregar archivos de código que pueden ser visualizados por todos los usuarios. Esto es posible ya que cada usuario creado tiene un directorio llamado `codes_examples` que está mapeado al directorio mencionado. Si quiere que los usuarios de Jupyter no pueden modificar el contenido de este directorio, debe cambiar los permisos a `555`, por ejemplo: `chmod -R 555 hub_examples`.
 
