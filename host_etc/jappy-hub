@@ -2,7 +2,7 @@
 set -e
 
 ### BEGIN INIT INFO
-# Provides:           jappy_hub
+# Provides:           jappy-hub
 # Required-Start:     $docker
 # Required-Stop:      
 # Default-Start:      2 3 4 5

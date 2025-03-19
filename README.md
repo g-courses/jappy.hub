@@ -24,6 +24,8 @@ En el directorio `jupyterhub_custom` están los archivos html personalizados.
 
 En el directorio `hub_examples` se pueden agregar archivos de código que pueden ser visualizados por todos los usuarios. Esto es posible ya que cada usuario creado tiene un directorio llamado `codes_examples` que está mapeado al directorio mencionado. Si quiere que los usuarios de Jupyter no pueden modificar el contenido de este directorio, debe cambiar los permisos a `555`, por ejemplo: `chmod -R 555 hub_examples`.
 
+Para iniciar Jappy cuando el host se inicie, debe modificar el script `jappy-hub`, que se localiza en el directorio `host_etc`. Específicamente, debe modificar la variable `JAPPY_INSTALL`, que es el directorio donde se ubican los archivo `docker-compose.yml`.
+
 ## Usuarios ya creados
 
 El contenedor tiene dos usuarios unix para acceder al JupyterHub: 
