@@ -3,6 +3,7 @@ services:
     platform: linux/amd64
     image: gastudil/courses:jappy-hub
     container_name: jappy_hub
+    #entrypoint: sleep infinity
     hostname: jappy_hub
     ports:
       - 8000:8000
