@@ -18,7 +18,9 @@ Una vez que el contenedor esté operativo, se pueden ingresar al servidor Jupyte
 http://IP_SERVIDOR:8000
 ```
 
-Todo el directorio `/etc` del contenedor está montado desde el directorio `hub_etc` en el anfitrión. Además, se sugiere que los usuarios tengan sus HOMEs en el directorio `/home/hub_homes`, el que está montado íntegramente en el directorio `hub_homes` en el anfitrión. Esto es para mantener la persistencia de los datos de trabajo de los usuarios si el contenedor se apaga.
+Todo el directorio `/etc` del contenedor está montado desde el directorio `hub_etc` en el anfitrión. Esto permite que la configuración del sistema operativo del contenedor que en forma persistente en el sistema de archivo del anfitrión. Por ejemplo, creación de nuevos usuarios del servidor Jappy.
+
+En forma similar, el directorio del contenedor `/home/hub_homes` está montado desde el directorio `hub_homes` en el anfitrión. Debido a lo anterior, se sugiere que los usuarios tengan sus HOMEs en el directorio `/home/hub_homes`, para mantener la persistencia de los datos de trabajo de los usuarios si el contenedor se apaga.
 
 En el directorio `jupyterhub_custom` están archivos html personalizados que permiten cambiar el diseño de la página de login y otras.
 
